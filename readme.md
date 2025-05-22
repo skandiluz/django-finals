@@ -34,18 +34,18 @@ cd your-repo-name
 
 
 
-2. Create virtual environment
+### 2. Create virtual environment
 
 bash
 
 python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
 
-3. Install dependencies
+### 3. Install dependencies
 
 pip install -r requirements.txt
 
-4. Run migrations and start server
+###  4. Run migrations and start server
 
 python manage.py migrate
 python manage.py runserver
