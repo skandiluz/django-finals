@@ -31,3 +31,21 @@ a web-based student management system built using the Django framework. It allow
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
+
+
+
+2. Create virtual environment
+
+bash
+
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+
+3. Install dependencies
+
+pip install -r requirements.txt
+
+4. Run migrations and start server
+
+python manage.py migrate
+python manage.py runserver
