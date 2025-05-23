@@ -5,13 +5,42 @@ a web-based student management system built using the Django framework. It allow
 ---
 
 ## 🚀 Features
+**User Authentication**
+  - User registration, login, and logout
+  - Only authenticated users can access student management features
 
-- User Registration & Authentication
-- Dashboard with student management tools
-- Add, edit, delete student records
-- Filter and search student data
-- Contact form
-- Clean and responsive UI with aesthetic background
+- **Dashboard**
+  - Quick access to all major features
+  - Quick stats: total students, adult students, and more
+  - Responsive design for desktop and mobile
+
+- **Student Management**
+  - Add, view, edit, and delete student records
+  - Detailed student profile view
+  - Search and filter students by name (NEW)
+  - List of all students with easy navigation
+
+- **Contact Form**
+  - Users can send messages or feedback
+
+- **Enhanced User Experience**
+  - Flash messages for actions (e.g., student added, deleted)
+  - Navigation bar with links to all major sections
+  - Consistent styling using custom CSS
+
+- **Security**
+  - Passwords and user data securely handled using Django’s authentication system
+  - Views protected with `@login_required` where necessary
+
+- **Student Search/Filter:**  
+  Users can search for students by name using the search bar on the "Search Students" page. Results update instantly based on the query.
+
+- **Improved Dashboard:**  
+  The dashboard now displays quick stats and provides direct links to all major features, including student management, adding students, contact form, and search.
+
+- **Detailed Student View:**  
+  Each student has a dedicated detail page showing all their information, with options to edit or delete.
+
 
 ---
 
