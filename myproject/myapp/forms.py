@@ -17,3 +17,8 @@ class StudentForm(ModelForm):
             'age': forms.NumberInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
         }
+        labels = {
+            'name': 'Full Name',
+            'age': 'Age',
+            'email': 'Email Address',
+        }

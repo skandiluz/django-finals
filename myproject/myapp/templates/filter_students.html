@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search/Filter Students</title>
+    <link rel="stylesheet" href="{% static 'styles/filter_students.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Search Students</h2>
+        <form method="get" action="{% url 'filter_students' %}">
+            <input type="text" name="search" placeholder="Search by name" value="{{ search_term }}">
+            <button type="submit">Search</button>
+        </form>
+
+        <hr>
+
+        <h3>Results:</h3>
+        {% if filtered_students|length > 0 %}
+            <ul>
+                {% for student in filtered_students %}
+                    <li>{{ student.name }} ({{ student.age }}, {{ student.email }})</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No students found.</p>
+        {% endif %}
+
+        <a href="{% url 'students_list' %}">← Back to Students List</a>
+    </div>
+</body>
+</html> 

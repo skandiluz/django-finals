@@ -80,12 +80,12 @@ def create_student(request):
     if request.method == 'POST':
         form = StudentForm(request.POST)
         if form.is_valid():
-            form.save()  # Automatically saves to Student model
-            messages.success(request, "Student created successfully!")
+            form.save()
+            messages.success(request, "Student added successfully!")
             return redirect('students_list')
     else:
         form = StudentForm()
-    
+
     return render(request, 'student_form.html', {'form': form})
 
 def student_detail(request, student_id):
@@ -157,4 +157,4 @@ def create_student_direct(request):
 
 def students_list(request):
     students = Student.objects.all()
-    return render(request, 'students_list.html')
+    return render(request, 'students_list.html', {'students': students})

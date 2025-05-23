@@ -1,97 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Students List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f9;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .header {
-            background-color: #343a40;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .nav-links {
-            display: flex;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-        .content {
-            padding: 20px;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
-        }
-        h2 {
-            margin-top: 0;
-            color: #333;
-        }
-        .btn {
-            background-color: #343a40;
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            font-size: 14px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        .btn:hover {
-            background-color: #23272b;
-        }
-        .student-card {
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-        .student-name {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        .student-info {
-            color: #666;
-        }
-        .no-students {
-            text-align: center;
-            color: #666;
-            font-style: italic;
-            padding: 40px;
-        }
-        .alert {
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-        }
-        .alert-success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-    </style>
+     <link rel="stylesheet" href="{% static 'styles/students_list.css' %}">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Django Blog</h1>
+            <h1>🎓</h1>
             <div class="nav-links">
                 <a href="{% url 'home' %}">Home</a>
                 <a href="{% url 'contact' %}">Contact</a>
@@ -108,7 +25,7 @@
                 <div class="alert alert-success">{{ message }}</div>
             {% endfor %}
             
-            <a href="{% url 'create_student' %}" class="btn">Add New Student</a>
+            <a href="{% url 'create_student' %}" class="btn">➕ Add New Student</a>
             
             {% if students %}
                 {% for student in students %}
@@ -117,10 +34,10 @@
                         <div class="student-info">
                             Age: {{ student.age }} | Email: {{ student.email }}
                         </div>
-                        <div style="margin-top: 10px;">
-                            <a href="{% url 'student_detail' student.id %}" class="btn" style="font-size: 12px; padding: 4px 8px;">View</a>
-                            <a href="{% url 'edit_student' student.id %}" class="btn btn-warning" style="font-size: 12px; padding: 4px 8px; background-color: #ffc107; color: #212529;">Edit</a>
-                            <a href="{% url 'delete_student' student.id %}" class="btn btn-danger" style="font-size: 12px; padding: 4px 8px; background-color: #dc3545;">Delete</a>
+                        <div class="action-buttons" style="margin-top: 12px;">
+                            <a href="{% url 'student_detail' student.id %}" class="btn">View</a>
+                            <a href="{% url 'edit_student' student.id %}" class="btn btn-warning">Edit</a>
+                            <a href="{% url 'delete_student' student.id %}" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 {% endfor %}
