@@ -11,8 +11,6 @@ a web-based student management system built using the Django framework. It allow
 
 - **Dashboard**
   - Quick access to all major features
-  - Quick stats: total students, adult students, and more
-  - Responsive design for desktop and mobile
 
 - **Student Management**
   - Add, view, edit, and delete student records
