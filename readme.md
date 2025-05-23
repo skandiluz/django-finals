@@ -49,3 +49,13 @@ pip install -r requirements.txt
 
 python manage.py migrate
 python manage.py runserver
+
+## Credits
+
+Developed by beckened boys.  
+
+Project Manager: kyle cane
+UI/UX Designer: karl gomez
+Frontend Developer: charles catamco
+Backend Developer: mark arabis
+
