@@ -1,7 +1,6 @@
-# 🎓Django Student Management System
+# Overview
 
-a web-based student management system built using the Django framework. It allows administrators to manage student records, track performance, and interact with the platform securely via login and registration systems.
-
+The Django Student Management System is a collaborative web application designed to streamline the management of student records for educational institutions. Built with Django, this platform enables administrators and authorized users to securely register, log in, and manage student data through an intuitive dashboard. Key features include adding, editing, viewing, and deleting student records, advanced search and filtering, and a contact form for feedback or inquiries. The application emphasizes security, user experience, and responsive design, making it accessible on both desktop and mobile devices. Developed as a group project, each team member contributed to different aspects of the system, ensuring a robust and user-friendly solution for student management needs.
 ---
 
 ## 🚀 Features
@@ -45,44 +44,38 @@ a web-based student management system built using the Django framework. It allow
 ## 🛠️ Technologies Used
 
 - **Backend:** Django (Python)
-- **Frontend:** HTML, CSS, Bootstrap (custom styles)
+- **Frontend:** HTML, CSS, 
 - **Database:** SQLite (default, can be changed)
 - **Version Control:** Git & GitHub
 
 ---
-
-## 📦 Setup Instructions
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
-
-
-
-### 2. Create virtual environment
-
-bash
-
-python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
-
-### 3. Install dependencies
-
-pip install -r requirements.txt
-
-###  4. Run migrations and start server
-
-python manage.py migrate
-python manage.py runserver
-
-## Credits
-
 Developed by beckened boys.  
 
 Project Manager: kyle cane
 UI/UX Designer: karl gomez
 Frontend Developer: charles catamco
 Backend Developer: mark arabis
+
+## 📦 Setup Instructions
+
+
+### 1. Create virtual environment
+
+bash
+
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+
+### 2. Install dependencies
+
+pip install -r requirements.txt
+
+### 3. Run migrations and start server
+
+python manage.py migrate
+python manage.py runserver
+
+## Credits
+
+
 

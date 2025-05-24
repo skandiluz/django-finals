@@ -13,8 +13,6 @@
             <button type="submit">Search</button>
         </form>
 
-        <hr>
-
         <h3>Results:</h3>
         {% if filtered_students|length > 0 %}
             <ul>
@@ -26,6 +24,7 @@
             <p>No students found.</p>
         {% endif %}
 
+        <br>
         <a href="{% url 'students_list' %}">← Back to Students List</a>
     </div>
 </body>

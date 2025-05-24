@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="{% static 'styles/home.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
 </head>
 <body>
     <div class="container">
@@ -55,11 +54,20 @@
                 </div>
             </div>
 
-            <div style="margin-top: 30px; padding: 20px; background-color: #e9ecef; border-radius: 8px;">
-                <h3>Quick Stats</h3>
-                <p><strong>Feature:</strong> You can manage all student records from this dashboard.</p>
-                <p><strong>Features Available:</strong> CRUD operations, form handling, user authentication</p>
+            <!-- New visually pleasing stats section -->
+            <div class="stats-bar" style="display: flex; gap: 24px; justify-content: center; margin: 40px 0 0 0;">
+                <div class="stat-card" style="background: #fff; border-radius: 10px; box-shadow: 0 2px 8px #e0e0e0; padding: 24px 32px; text-align: center;">
+                    <div style="font-size: 2rem; color: #007bff;">👨‍🎓</div>
+                    <div style="font-size: 1.2rem; font-weight: bold;">Total Students</div>
+                    <div style="font-size: 1.5rem; color: #333;">{{ total_students|default:"—" }}</div>
+                </div>
+                <div class="stat-card" style="background: #fff; border-radius: 10px; box-shadow: 0 2px 8px #e0e0e0; padding: 24px 32px; text-align: center;">
+                    <div style="font-size: 2rem; color: #ffc107;">📝</div>
+                    <div style="font-size: 1.2rem; font-weight: bold;">Recent Added</div>
+                    <div style="font-size: 1.5rem; color: #333;">{{ recent_added|default:"—" }}</div>
+                </div>
             </div>
+            <!-- End stats bar -->
         </div>
 
         <div class="footer">
